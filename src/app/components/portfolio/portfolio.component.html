@@ -1,0 +1,142 @@
+<div class="containerr">
+    <div class="main">
+        <!-- <div class="Home-button" routerLink="/dashboard">
+            &#8592; Return Home
+        </div>
+        <div class="brand"></div>
+        <h3 class="brand">SOCH <span>MARKETING</span></h3>
+        <div class="rr">
+        <div class="box mains" >
+            <span class="img"><img src="../../../assets/bb.jpg" alt=""></span>
+            
+            <span class="desc">
+                <div class="title">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora cupiditate</div>
+           
+            </span>
+            <div class="buttons">
+                <button class="btn btn-primary one" routerLink="/details">Know more</button>
+                <button class="btn btn-primary outline two" >
+                    Details
+               </button>
+        </div>
+        </div>
+        <div class="box mains" >
+            <span class="img"><img src="../../../assets/cc.jpg" alt=""></span>
+            <span class="desc">
+                <div class="title">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora cupiditate</div>
+           
+            </span>
+            <div class="buttons">
+                <button class="btn btn-primary one" routerLink="/details">Know more</button>
+                <button class="btn btn-primary outline two" >
+                    Details
+               </button>
+        </div>
+        </div>
+        <div class="box mains" >
+            <span class="img"><img src="../../../assets/cover.jpg" alt=""></span>
+            <span class="desc">
+                <div class="title">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora cupiditate</div>
+                
+            </span>
+            <div class="buttons">
+                <button class="btn btn-primary one" routerLink="/details">Know more</button>
+                <button class="btn btn-primary outline two" >
+                    Details
+               </button>
+        </div>
+        </div>
+        <div class="box mains" >
+            <span class="img"><img src="../../../assets/mm.jpg" alt=""></span>
+            <span class="desc">
+                <div class="title">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora cupiditate</div>
+           
+            </span>
+            <div class="buttons">
+                <button class="btn btn-primary one" routerLink="/details">Know more</button>
+                <button class="btn btn-primary outline two" >
+                    Details
+               </button>
+        </div>
+        </div>
+    </div> -->
+    <div class="custom-carousal">
+        <div class="image">
+          <ng-container *ngFor="let image of images; index as i">
+            <img *ngIf="selectedIndex == i" #images [src]="image" alt="" [ngClass]="{ 'selected':selectedIndex==i}">
+    
+          </ng-container>
+          <!-- <img #images class="right-out"  src="../../../assets/aa.jpg" alt="" alt=""> -->
+    
+        </div>
+        <div class="image-dots">
+          <span (click)="changeSelection(i)" class="dot" *ngFor="let image of images; index as i"
+            [ngClass]="{ 'selected-dot':selectedIndex==i}"></span>
+        </div>
+      </div>
+  
+    
+</div>
+<div class="container">
+    <div class="rr all_cards">
+            <ng-container *ngFor="let i of items">
+        <div class="myCard_custom" [ngStyle]="{'background':'url('+i.cover_photo+') no-repeat'}">
+            <div class="card-details">
+                <div class="details">
+                    <h4>{{i.title}}</h4>
+                    <p>
+                        {{i.description}}
+                    </p>
+                </div>
+                <div class="buttons">
+                    <!-- (click)="open(project)" -->
+                    <button class="one" (click)="open(i.id)">
+                        Preview
+                    </button>
+                    <button class="two" [routerLink]="['../details',i.id]">
+                        Details
+                    </button>
+                </div>
+                
+            </div>
+            <div class="styler">
+
+            </div>
+
+        </div>
+    </ng-container>
+    </div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div *ngIf="selected" class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+          
+          <div class="all">
+              
+              <div class="imgs">
+                  <img [src]="selected.cover_photo" alt="">
+              </div>
+              <div class="content">
+                  <p>
+                      {{selected.description}}
+                  </p>
+              </div>
+          </div>
+         
+       
+      </div>
+ 
+    </div>
+  </div>
+</div>
+<a #modalOpen data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>

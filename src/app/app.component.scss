@@ -1,0 +1,20 @@
+.stays{
+    background-image: url('./../assets/pointer.png');
+    // background-color: aqua;
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    // transform: rotate(10deg);
+    // transform-origin: left bottom;
+    // border: 1px solid;
+    // position: ;
+
+}
+body{
+    overflow:  var(--overFlow-body);;
+}
+
+

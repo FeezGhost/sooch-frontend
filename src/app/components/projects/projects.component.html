@@ -1,0 +1,74 @@
+<section id="projects">
+    <div class="container">
+        <div class="section-heading">
+            <span class="first">
+                <div class="headcontainer">
+                    <h3> View All</h3>
+                    <!-- data bs outline not working google -->
+                    <h2 data-bs-outline="Projects">Projects</h2>
+                    <h4>Recent</h4>
+                </div>
+
+            </span>
+        </div>
+        <div class="project-items">
+            <div class="item d-flex justify-content-center" *ngFor="let project of projects">
+                <div class="left">
+                    <div class="img">
+                        <img [src]="project.cover_photo" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 class="project-title">
+                        {{project.title}}
+                    </h3>
+                    <h3 class="project-subtitle">
+                        {{project.subTitle}}
+                    </h3>
+                    <p class="project-description">
+                        {{project.description}}
+                    </p>
+                    <div class="buttons">
+                        <button class="btn btn-primary one" [routerLink]="['../all-projects/details',project.id]">Know more</button>
+                        <button class="btn btn-primary outline two" (click)="open(project)">
+                            <span>
+                                Preview
+                            </span>
+                            <i class="fa fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+     
+      <!-- Modal -->
+      <div *ngIf="selected" class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+           
+            <div class="modal-body">
+                
+                <div class="all">
+                    
+                    <div class="imgs">
+                        <img [src]="selected.cover_photo" alt="">
+                    </div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores inventore itaque sit in consequuntur molestias, quis quam laboriosam doloremque suscipit odit! Repudiandae ea nostrum minima reprehenderit consequatur, possimus itaque beatae.
+                        </p>
+                    </div>
+                </div>
+               
+             
+            </div>
+       
+          </div>
+        </div>
+      </div>
+<a #modalOpen data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+</section>

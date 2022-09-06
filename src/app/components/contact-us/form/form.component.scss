@@ -1,0 +1,72 @@
+.form{
+    textarea{
+        width: 100%;
+    }
+    input , textarea{
+        margin: 10px;
+        border: 0px;
+        background-color: aliceblue;
+        transition: all 0.4s;
+
+    }
+    input{
+        height: 30px;
+    }
+    input:focus+.place{
+        top: -5px;
+       background-color: white;
+       color: black;
+    }
+    input:focus{
+       background-color: white;
+    }
+    textarea:focus+.place{
+        top: -5px;
+       color: black;
+
+       background-color: white;
+    }
+    textarea:focus{
+       background-color: white;
+    }
+    input:not(:placeholder-shown)+.place {
+        /* You need to add a placeholder to your fields. For example: <input "placeholder=" "/> */
+        top: -5px;
+       background-color: white;
+
+      }
+      input:not(:placeholder-shown) {
+        /* You need to add a placeholder to your fields. For example: <input "placeholder=" "/> */
+       background-color: white;
+       border: 3px solid;
+       border-radius: 2px;
+       
+
+      }
+
+    .row{
+        padding: 0px;
+    }
+    .d{
+            position: relative;
+            padding: 0px;
+        .place{
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            z-index: 10;
+            background-color: aliceblue;
+            color: rgba(63, 61, 61, 0.367);
+            transition: all 0.4s;
+        }
+       
+    }
+    
+    .btn{
+        button{
+            width: 60%;
+            height: 50px;
+            border-radius: 20px;
+        }
+    }
+}

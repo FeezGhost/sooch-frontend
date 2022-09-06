@@ -1,0 +1,26 @@
+<section id="projectDetails">
+    <div class="container">
+        <div class="project-items" *ngFor="let d of data">
+            <div class="item d-flex justify-content-center" >
+                <div class="left">
+                    <div class="img">
+                        <img [src]="d.cover_photo" onerror="this.src='../../../assets/aa.jpg'" alt="../../../assets/aa.jpg">
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- <h3 class="project-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </h3>
+                    <h3 class="project-subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </h3> -->
+                    <p class="project-description">
+                        {{d.description}}
+                    </p>
+                  
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<!-- <div class="container">
+<div class="d-flex mian justify-content-between">
+            <iframe width="360" height="230" src="https://www.youtube.com/embed/oaj5ecsb0H0" title="Tere Bina | Hamza Malik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="360" height="230" src="https://www.youtube.com/embed/oaj5ecsb0H0" title="Tere Bina | Hamza Malik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="360" height="230" src="https://www.youtube.com/embed/oaj5ecsb0H0" title="Tere Bina | Hamza Malik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="360" height="230" src="https://www.youtube.com/embed/oaj5ecsb0H0" title="Tere Bina | Hamza Malik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       
+
+</div>
+</div> -->
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3">Most Viewed Videos </h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <ng-container *ngFor="let item of [].constructor(slides); index as i">
+                        <div class="carousel-item" [ngClass]="{'active': i === 0}" >
+                            <div class="row">
+                                <div [class]="'col-md-'+ 12/cards +' mb-3'" *ngFor="let itema of videos.slice(i*cards,i*cards+cards);index as j">
+                                    <iframe width="360" height="230" [src]="itema.src |trust"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

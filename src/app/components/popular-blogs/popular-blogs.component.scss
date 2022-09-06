@@ -1,0 +1,89 @@
+.main{
+  
+    
+    .rows{
+        display: flex;
+       width: 100%;
+       flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+       .card{
+        position: relative;
+        height: 70vh;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 20px;
+        width: 20rem ;
+        transition: all 1s;
+        margin-bottom: 1rem;
+        .image{
+            position: absolute;
+            height: 110%;
+            width: 110%;
+            left: -1%;
+            top: -1%;
+            img{
+              height: 110%;
+            width: 110%;
+            object-fit: cover;
+           
+        }
+    }
+    .image::before{
+        content: "sdf";
+        background-color:  #1b212f;
+        position: absolute;
+        bottom: 0;
+        height: 60%;
+        z-index: 1;
+        width: 100%;
+    }
+    .stuff{
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        height: 60%;
+        color: #fff;
+        left: 0;
+        padding: 10px;
+    }
+    .title{
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .description{
+        z-index: 1;
+        position: relative;
+        top: 20px;
+        // color: rgba(255, 255, 255, 0.47);
+        margin-top: 04%;
+        text-align: justify;
+        font-size: 16px;
+        font-weight: 450;
+    }
+    .view-button{
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        // color: rgba(255, 255, 255, 0.47);
+        // transform: translateY(-100%);
+        transform: translate(-40%,-50%);
+    }
+        // background-position: center !important;
+        // background-repeat: no-repeat !important;
+        // object-fit: contain !important;
+        // background-size: cover !important;
+        // background-color: ;
+        // width: 25%;
+       }
+       .card:hover
+       {
+        box-shadow: 0px 2px 10px 3px #000000a6;
+       }
+    }
+}

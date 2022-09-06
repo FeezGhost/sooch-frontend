@@ -1,0 +1,196 @@
+.main{
+    margin-top: 10rem;
+}
+.upper,.lower{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.upper{
+    .left{
+        position: relative;
+        .image:before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            z-index: 1;
+            color: aqua;
+            height: 10%;
+            background-color: rgba(255, 0, 55, 0.087);
+            width: 110%;
+        }
+        .image{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            width: 100%;
+            // height: 30vh;
+            display: block;
+            object-fit: cover;
+            height: 100%;
+        }
+    
+        .overlay{
+            position: absolute;
+            height: 60%;
+            width: 50%;
+            background: #1C2127;
+            bottom: -10%;
+            left: 10%;
+            color: #fff;
+            padding: 20px;
+            z-index: 2;
+            
+        }
+    }
+    .right{
+        padding: 20px;
+        max-width: 60%;
+        max-height: 100%;
+        .info{
+
+        }
+        .cards{
+            display: flex;
+            margin-top: 10rem;
+            .card{
+                position: relative;
+                margin-top: 20px;
+                background-color: #f050500a;
+                margin: 2px;
+                .icon{
+                    i{
+                        font-size: 300%;
+                        color: #F05050;
+                    }
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,50%);
+                    top: -50%;
+                
+                }
+                .details{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    
+}
+.lower
+{
+    justify-content: space-between;
+    .left{
+        width: 40%;
+
+        .details
+        {
+            width: 100%;
+            padding: 30px;
+            text-align: justify;
+            background-color: #f050500a;
+
+
+        }
+    }
+    margin-top: 6%;
+    .right{
+        max-width: 60%;
+        .main-details{
+            padding: 20px;
+            width: 100%;
+        }
+        .styled{
+            .del{
+                position: relative;
+                display: flex;
+                margin: 40px 20px;
+                background-color: #f050500a;
+                padding: 10px;
+                border-radius: 20px;
+                
+                .icon{
+                    i{
+                        font-size: 400%;
+                    }
+                    margin-right: 20px;
+                    vertical-align: middle;
+                }
+            }
+            .del::before
+            {
+                content: "";
+                position: absolute;
+                top: -20%;
+                background: linear-gradient(to right,#f050503d, #f0505012  );
+                width: 98%;
+                height: 2px;
+
+            }
+            .del::after
+            {
+                content: "";
+                background: linear-gradient(to right, #f0505012,#f050503d );
+                width: 98%;
+                height: 2px;
+                position: absolute;
+                bottom: -20%;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .upper , .lower{
+        flex-direction: column;
+        .overlay{
+            position: absolute;
+            height: 60%;
+            width: 80% !important;
+            background: #1C2127;
+            bottom: -10%;
+            left: 10%;
+            color: #fff;
+            padding: 40px;
+            z-index: 2;
+            p{
+                margin-top: 10%;
+            }
+            
+        }
+    }
+    .upper{
+        .right{
+            width: 100%;
+            max-width: 100% !important;
+            .info{
+                margin-top: 10%;
+            }
+            .cards{
+                flex-wrap: wrap;
+                justify-content: center;
+                .card{
+                    max-width: 45% !important;
+                    margin-bottom: 20%;
+                    .icon{
+                        top: -35% !important;
+                    }
+                }
+                
+            }
+        }
+    }
+    .lower{
+        .left, .right{
+            width: 100%;
+        }
+        .right{
+            max-width: 100% !important;
+            
+        }
+    }
+}

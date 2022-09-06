@@ -1,0 +1,95 @@
+<div class="main">
+  <div class="custom-carousal">
+    <div class="image">
+      <ng-container *ngFor="let image of images; index as i">
+        <img *ngIf="selectedIndex == i" #images [src]="image" alt="" [ngClass]="{ 'selected':selectedIndex==i}">
+
+      </ng-container>
+      <!-- <img #images class="right-out"  src="../../../assets/aa.jpg" alt="" alt=""> -->
+
+    </div>
+    <div class="image-dots">
+      <span (click)="changeSelection(i)" class="dot" *ngFor="let image of images; index as i"
+        [ngClass]="{ 'selected-dot':selectedIndex==i}"></span>
+    </div>
+  </div>
+  <div class="flexa row-one">
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/bla.jpeg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    
+ 
+  </div>
+  <div class="flexa row-two">
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/ccc.jpg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/R.jpg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flexa row-three">
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/ccc.jpg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/R.jpg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card" [ngStyle]="{background:'url('+'../../../assets/R.jpg'+') ' }">
+      <div class="border">
+        <h5>Mohammad Usman</h5>
+        <h6 class="ohda">Operational Manager</h6>
+        <div class="icons">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flexa">
+    
+  </div>
+ 
+</div>

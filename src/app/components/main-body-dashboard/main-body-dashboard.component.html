@@ -1,0 +1,83 @@
+
+<div class="main">
+   <!-- <div class="just-for-back"></div> -->
+    <!-- <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="100000ms">
+            <img src="./../../../assets/aa.jpg" class="d-block w-100" >
+       
+          </div>
+          <div class="carousel-item" data-bs-interval="100000ms">
+            <img src="./../../../assets/cover.jpg" class="d-block w-100" >
+            
+          </div>
+          
+        </div>
+       
+      </div> -->
+    <!-- <div class="intro">
+        <div class="heading">
+            <h1>We are real estate consultant<span class="gol">s</span> </h1>
+        </div>
+        <div class="intro-sub">
+            <h6>
+                soch marketing has been working with realtors, brokers,
+                 developers and other construction services for a long time 
+                 and needless to say we have a "ton" of experience on how to 
+                 generate quality and targeted leads online
+            </h6>
+        </div>
+        <div class="buttons">
+            <a  class="bol ">
+              24<span class="plus">+</span>
+              <a class="sub-bol">
+               Sucessfull  Projects
+              </a>
+            </a>
+            <a  class="bol">
+              35<span class="plus">+</span>
+              <a class="sub-bol">
+               Happy Clients
+              </a>
+            </a>
+            <a  class="bol">
+              40<span class="plus">+</span>
+              <a class="sub-bol">
+                Team Members
+              </a>
+            </a>
+        </div>
+        
+        
+    </div>  -->
+    <!-- <svg> -->
+      <!-- <path M 0 450  /> -->
+    <!-- </svg> -->
+    <div class="image">
+      
+      <img *ngFor="let image of images; index as i" #images    [src]="image" alt="" [ngClass]="{ 'left-in':((selectedIndex+1)%length)==i, 'right-out': (selectedIndex)%length==i}">
+      <!-- <img #images class="right-out"  src="../../../assets/bb.jpg" alt="" alt=""> -->
+    </div>
+
+</div>
+<app-company-profile></app-company-profile>
+<app-projects> </app-projects>
+<app-videos></app-videos>
+<app-popular-blogs></app-popular-blogs>
+<div class="contactusform"[ngStyle]="{'display':this.common.showOverlay?'block':'none'}">
+  <div class="overlay">
+  </div>
+  <div class="formm">
+    <div class="cross-btn" (click)="clicked()">
+
+    </div>
+    <app-form></app-form>
+  </div>
+</div>
+<!-- <app-about-us></app-about-us> -->
+<!-- <app-loader></app-loader> -->
