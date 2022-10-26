@@ -64,10 +64,12 @@ length;
   }
 
   images = [
-    "../../../assets/aa.jpg",
-    "../../../assets/bb.jpg",
-    "../../../assets/cc.jpg",
-    "../../../assets/cover.jpg"
+    "../../../assets/faisaltown.jpg",
+    "../../../assets/taj.jpg",
+    "../../../assets/rudn.jpg",
+    "../../../assets/nova.jpg",
+    "../../../assets/metro.jpg",
+    "../../../assets/kingdom.jpg"
   ]
   scroll = (): void => {
 

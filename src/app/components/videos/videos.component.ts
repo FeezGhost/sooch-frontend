@@ -13,14 +13,14 @@ export class VideosComponent implements OnInit {
     this.slides  =Math.ceil( this.videos.length / this.cards);
     console.log(this.cards,this.slides)
   }
-   videos=[{src:"https://www.youtube.com/embed/oaj5ecsb0H0"},
-   {src:"https://www.youtube.com/embed/0NFxcNheoLc"},
-   {src:"https://www.youtube.com/embed/oaj5ecsb0H0"},
-   {src:"https://www.youtube.com/embed/0NFxcNheoLc"},{src:"https://www.youtube.com/embed/0NFxcNheoLc"},{src:"https://www.youtube.com/embed/0NFxcNheoLc"}
-   ,{src:"https://www.youtube.com/embed/0NFxcNheoLc"},
-   {src:"https://www.youtube.com/embed/oaj5ecsb0H0"},
-   {src:"https://www.youtube.com/embed/0NFxcNheoLc"},
-   {src:"https://www.youtube.com/embed/oaj5ecsb0H0"},
+   videos=[{src:"https://www.youtube.com/embed/J2KwjxIpM2k"},
+   {src:"https://www.youtube.com/embed/FUtd2gxOrSY"},
+   {src:"https://www.youtube.com/embed/yOL7bM8_hnI"},
+   {src:"https://www.youtube.com/embed/zp55h3AxCzs"},{src:"https://www.youtube.com/embed/UEJiKJDp3bs"},{src:"https://www.youtube.com/embed/EWi-9nxxqJM"}
+   ,{src:"https://www.youtube.com/embed/0MdiIcRULpc"},
+   {src:"https://www.youtube.com/embed/FUtd2gxOrSY"},
+   {src:"https://www.youtube.com/embed/_SoRp9XXvWU"},
+  
   ]
   ngOnInit(): void {
   }
